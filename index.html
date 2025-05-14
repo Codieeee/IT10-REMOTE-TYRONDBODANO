@@ -18,5 +18,30 @@
     <button id="increaseFont">Increase Font Size</button>
     <button id="decreaseFont">Decrease Font Size</button>
     <button id="resetFont">Reset Font Size</button>
+
+
+    <script>
+        const sampleText = document.getElementById('sampleText');
+        const increaseFontButton = document.getElementById('increaseFont');
+        const decreaseFontButton = document.getElementById('decreaseFont');
+        const resetFontButton = document.getElementById('resetFont');
+
+        let currentFontSize = 16;
+
+        increaseFontButton.addEventListener('click', () => {
+            currentFontSize += 2;
+            sampleText.style.fontSize = `${currentFontSize}px`;
+        });
+
+        decreaseFontButton.addEventListener('click', () => {
+            currentFontSize -= 2;
+            sampleText.style.fontSize = `${currentFontSize}px`;
+        });
+
+        resetFontButton.addEventListener('click', () => {
+            currentFontSize = 16;
+            sampleText.style.fontSize = `${currentFontSize}px`;
+        });
+    </script>
 </body>
 </html>
